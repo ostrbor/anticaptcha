@@ -1,7 +1,7 @@
 # anti captcha
 
 Simple anticaptcha library for images with text.
-Set api_key of anti-captcha.com in settings.py before using.
+Set API_KEY of anti-captcha.com in settings.py before using.
 
 ```python
 from anticaptcha import Anticaptcha
