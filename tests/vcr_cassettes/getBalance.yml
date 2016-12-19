@@ -1,0 +1,26 @@
+interactions:
+- request:
+    body: '{}'
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['49']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.12.4]
+    method: POST
+    uri: http://api.anti-captcha.com/getBalance
+  response:
+    body: {string: '{"errorId":0,"balance":2.00277}'}
+    headers:
+      Access-Control-Allow-Headers: ['Overwrite, Destination, Content-Type, Depth,
+          User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name,
+          Cache-Control']
+      Access-Control-Allow-Origin: ['*']
+      Connection: [keep-alive]
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Mon, 19 Dec 2016 13:14:49 GMT']
+      Server: [nginx/1.10.2]
+      X-Powered-By: [PHP/5.4.45]
+    status: {code: 200, message: OK}
+version: 1

@@ -1,0 +1,26 @@
+interactions:
+- request:
+    body: '{"task": {"type": "ImageToTextTask", "body": "iVBORw0KGgoAAAANSUhEUgAAAGoAAAAUCAIAAADqaz9xAAALJ0lEQVR4nM1YfWxT5Rp/z0fb051z6NpStm51hUzcgAJjAf/YHQEHQsFMgbEoETRX2VRMQGZMvGC8GYiCUZE/RkgcbpM6lqCAyXTiBlK7T934MBtjQ7dYurZrXb+39nz0nPvHmxxPOja8XnLvff56zvM+7/M+7+99vloEWf2PLasX791eVLAwK50iwAMlBEEAAKIoPlizAABBEKLRaCgUCv9pikajf8ETBEF4nkdRVC68en3kUP2Vq9dHkK0Hzpw/svPB3Sv1bMjM7vd/DYu/4D9N0y6Xi6bp6asl+2rxfeV/e7BHhsPhO3fuGAyGcDgsCU+ePPl/goVGRt988w0AQKfTbdmyxWKx0DTd09NTW1sLlc+ePVteXp4Sd3L659/XIQ/Eb6fT2dHRcfXq1dOnTyeTyf/c4H1pOhYajSY9PV0zM9E0PR0LBEFu3LixfPly+Dk1NUWSJOTz8/MHBwdn8SEUS+AzOQcA4Hn+3Xffraur83g8eXl5hw8fLi0thcKGhgaXy6XVanNzc51Op8vl+p9gce3atePHj9vtdq/Xm56evn79+jfffDMnJ0eyLIpiXV3dqVOn+vv709LSnnrqqRMnTlit1o6ODofDUVxcLI8eURRv3bolfY6OjvI8D92TSO52OkUA8V400yUrKiry8/P/JCgE8UcjeuWVV2ZSe+SRR1IkXV1d0I2NGzfK75ZChw8fnh5NFEXdvn0bKnAcV1ZWlqKwYMECtVoNgXA4HJI1hmF6enoKCwslzdzc3PHx8fHxcZ/PFwwG4/F4MplMBWp2+NasWfNnkFKpVEDWKKaT3OayZctSVuVOQ5IQXLBggdyIRB999BEAwGw2Tz903rx5k5OToiju378fAJCWljbdHxRFcRyHajNFzNtvv33t2rXe3t6+vr6BgQGPxxOPxwVB+Dfg0+l0Z8+evXDhwnTr2dnZa9euhbzBYICMSqX6+OOPPR6Px+PZsGHDPeFTKpVHjhwZGxvzeDybNm2Cwm3btkkKn3/+OXSDZdmMjIzKysrXX39d7p7T6VSpVFlZWQCA4uLiS5cuTUxMRKPR8vJyaKGpqWloaAhFUfiuOTk5586dm5iY+O2336QeWlBQILfJMIz8diRJfvXVV93d3d9//31ra6vdbh8YGAgGgykBeB/4bDabIAgrV66Um96zZ8/IyAjP8/F4XHpMyFRXVyeTSUEQBEEYHh6WtnAcJ98+Pj7OsizP80NDQ1C4evVqyciyZcvgIzc1NZWUlGRkZAwPD8vdO3DgANREEATDMBRFU2Lw/fffr6qqggoajWZkZARuFARByqeKigpORgzD+P3+1tZWi8UCFebMmeNwONrb27/99tvvvvuur6/P5/PxPC/3ZMauDMlqtTY0NPT29sqFe/fuJUkyEAhI8AmCAJnNmzdHIpF4PB6Px+WzUiAQkPhNmzaJoshxXCwWU6vVUDgwMGC1WiH/888/9/T0cBx36tSppUuXWiyW3Nxc6f7JZBIOHAAAURTha6VkH0mSly5dggoVFRVGoxG+KMMwTqcT6ixZsiQgo1AoJAjC8uXLP/30U6gQiUQ++eQTHMehHSlt5Qfdu/NKRBDEwYMHU4TRaDQajaIoqlAoUpZ4nh8bG4PlRoosAIDkNABAr9cLghCPxwOBwO3btyVfy8rKJFyOHTv2xhtvDA4Ochz34osvTk5OwjRMJBIcx8kt35Pmzp17584dyD/66KOhUEij0QAAuru7R0dHEQQRRTEzM1PuFY7jFEXp9Xp5K7ty5UplZeUsB90HvqNHj7rdbgCAwWDw+/1QCOdhURSnN75ffvklOztbqVQCAJqamiR5JBKReJ/PZzabWZaNxWLnz5+HQpIk58+fbzKZ4AzU3NyM43hxcbHdbi8sLAyHw+np6aIohsPhSCQinRuNRimKEgQhkUiEQiG/3x8Oh+G0IZULlUoVCARwHBcE4a233oKeq9VqvV6/atUqm81mMBgQBCEIgiAIFEXhfSVXYbtAUVQKQPl975O8H3zwAWReffVVSUjTNEEQCIKwLJuiX1NT4/V6nU6nzWZrbGyUb5Hb9Pv9Pp+vsbFR0snLy6NpeteuXfCT5/nm5uapqamNGzcmEglBEBAEgTDFYrGCggKodvToUZfLNTU1NTo6+vXXX7/33nuNjY0KhUKtVkvTX1dX18TERE9PzzPPPNPZ2QmFixYtmjNnDgBg586d4+PjgiDgOK5Wq5VKZV1dneSqRqOR6hKsj7D2/XHh2VsHpIKCgh9//FH6dLlcw8PDnZ2dsL5AWrp0acoueRbInzSFYCjV1NS43e6bN29K1VCpVGo0ms8++6yjo2NkZCQSifz+++/9/f1dXV0XLlyAJWk6FRUV7du37+bNmzDQ5JSZmUlRFORffvllyaXCwsIzZ844HA6Hw/Haa69hGCZtefbZZ9vb21tbW1taWq5cudLf35/SfO8TfZDeeecdeZ7qdDqtVkvTNExSSA6H4+GHH5bvknderVYr8SlqgiBYrdYXXnhBq9UaDIYtW7ZAOcuyeXl5BoOBYZhYLDY1NcUwDMuyOI6vWLHiyy+/lJ8uUWdn57x58xiGefLJJx977DH5ktfrnZychD26pKREr9d3d3cDAK5fv15ZWbl27dp169Y1NTWZzWZ42aKiourqaoPBAMdsnucZhuE4Th5e94ZPrvH000+vWrUKRVEpAFUqFUmSNE2r1WroAQCApum+vr6qqqqsrCyFQpGRkbFr1y5pVR4sNptt//79Dz30kEKhMBqNL730Um1tLY7jOI5jGLZjxw5pCikrK0NRFPboYDAYiUQ4jsNxnCCIzZs3Dw4O7t69e/78+UqlkiCInJyc0tLSmpqaDRs2KBQKhULx4YcfVlVVmUwmpVJpMpkWLlwI6zVBEOvXr8cwbMmSJS0tLbt3787Pz9dqtYIgBINBjuOeeOIJm81mt9tNJhOMEthtpjff+/xl0NnZaTQaSZJ0u92iKBqNRr1er1AoOI6bmJjweDwAgBTh3bt3A4FAMpnEMEyn05lMJhh6Ulb+9NNPcOJ1u92RSISmaUknGAy6XK7nnntuaGgoMzOzubk5HA4zDAMhg78609PTjUajRqOBMcLzfCAQcDqdoVCIIAi9Xk9RVFtb2w8//FBeXp6bmysIwq+//nry5MmWlhbo5I4dO06fPi0IQigU8vl8oVAIQZC5c+caDAalUolhGEEQCoUCRhw0DgcvnU6Xk5Oj0+lgNIQnE7j9xuiaggUzoAeKioqgCQAAgiDSgCrnpwulf0lZlo1Go7M8j6STlZX1xRdfLFq06PLlyx6Px2KxPP744xqNJpFIsCzLcRx8D5qmKYqCUM5itre3t76+vr6+Xi6E2NE0vWfPnkAgwHFcMBiEnZqiqLS0NEEQ4E21Wi1FUSiK8jwPK909T7lxx4OfONcxC3x/jSQE4/E4HCZm0oQDoN/vX7ly5fbt2zEMM5vNW7duvXjx4vPPP08QhEqlisViMHGUSiVJkhRFwWySnwUjkWGYQCAQi8WsVmtbW5u8+AIAOI7TaDSHDh1CEGRsbIznefg28PevUqkURTEWi8HqxjAMhmHJZDIWi7EsC7NeHhwAgOq6y+hFx61tB232G6PhycQsWGAYhmGYtHkWIY7jKpUqLS0NlvZEIgHH7La2NmgQbklB8NixYytWrCBJ8u7du+3t7cePH8/OzlapVFIewdEMFlx5H0MQRKFQEAQB7w+PI0myurq6tLTUbDar1WqSJC0WS2VlZUNDw+LFi6HO5OQky7JwJJIuAi0EAgGv1+t2u71eL4xTDMPkzthvjJbsq716feRfqhV3uY/2Z1AAAAAASUVORK5CYII="}}'
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['3982']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.12.4]
+    method: POST
+    uri: http://api.anti-captcha.com/createTask
+  response:
+    body: {string: '{"errorId":0,"taskId":189162325}'}
+    headers:
+      Access-Control-Allow-Headers: ['Overwrite, Destination, Content-Type, Depth,
+          User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name,
+          Cache-Control']
+      Access-Control-Allow-Origin: ['*']
+      Connection: [keep-alive]
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Mon, 19 Dec 2016 13:14:49 GMT']
+      Server: [nginx/1.10.2]
+      X-Powered-By: [PHP/5.4.45]
+    status: {code: 200, message: OK}
+version: 1

@@ -1,0 +1,9 @@
+# Set your key
+API_KEY = 
+
+# Contsants
+BASE_URL = 'http://api.anti-captcha.com/'
+HEADERS = {'Content-Type': 'application/json', 'Accept': 'application/json'}
+TIMEOUT = 60 # max seconds to wait for result
+WAIT_BEFORE_REQUESTS = 5 # wait seconds before starting to request for result
+WAIT_BETWEEN_REQUESTS = 1
