@@ -1,4 +1,4 @@
-# anticaptcha
+# anti captcha
 
 Simple anticaptcha library for images with text.
 Set api_key of anti-captcha.com in settings.py before using.
