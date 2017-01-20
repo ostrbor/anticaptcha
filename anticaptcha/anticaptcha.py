@@ -1,31 +1,34 @@
-import logging
-from base64 import b64encode
 import json
+import logging
 import time
-from .settings import (BASE_URL, WAIT_BEFORE_REQUESTS, TIMEOUT,
-                       WAIT_BETWEEN_REQUESTS)
-from .exceptions import TimeoutError
-from . import session, API_KEY
+from base64 import b64encode
+
+from . import session
+
+TIMEOUT = 60  # max seconds to wait for result
+WAIT_BEFORE_REQUESTS = 5  # wait seconds before starting to request for result
+WAIT_BETWEEN_REQUESTS = 1
 
 
 class Anticaptcha:
-    def __init__(self):
+    def __init__(self, API_KEY):
         self.clientKey = API_KEY
-        self.base_url = BASE_URL
+        self.base_url = 'http://api.anti-captcha.com/'
         self.logger = logging.getLogger(__name__)
 
     def getBalance(self):
         """sends JSON data in POST request -> dict"""
-        self.logger.info('GET BALANCE')
+        self.logger.info('[ANTICAPTCHA] GET BALANCE')
         url = self.base_url + 'getBalance'
         data = {'clientKey': self.clientKey}
         response = session.post(url, data=json.dumps(data)).json()
-        self.logger.info('RESPONSE TO GET BALANCE: {}'.format(response))
+        self.logger.info('[ANTICAPTCHA] RESPONSE TO GET BALANCE: {}'.format(
+            response))
         return response
 
     def createTask(self, bin_str):
         """binary content of file -> id of task in dict"""
-        self.logger.info('CREATE TASK')
+        self.logger.info('[ANTICAPTCHA] CREATE TASK')
         url = self.base_url + 'createTask'
         img_str = b64encode(bin_str).decode('ascii')
         task = {'type': 'ImageToTextTask', 'body': img_str}
@@ -35,7 +38,7 @@ class Anticaptcha:
         return response
 
     def getTaskResult(self, task_id):
-        """ -> dict with solution and extra info about task"""
+        """ -> dict with solution and extra info about task OR None"""
         self.logger.info('GET TASK RESULT')
         url = self.base_url + 'getTaskResult'
         time.sleep(WAIT_BEFORE_REQUESTS)
@@ -50,7 +53,7 @@ class Anticaptcha:
             else:
                 break
         else:
-            raise TimeoutError('Spent {} seconds before giving up.'.format(
-                TIMEOUT))
-        self.logger.info('RESPONSE TO GET TASK RESULT: {}'.format(response))
+            return
+        self.logger.info(
+            '[ANTICAPTCHA] RESPONSE TO GET TASK RESULT: {}'.format(response))
         return response
