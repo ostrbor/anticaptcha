@@ -1,17 +1,19 @@
-import yaml
+import logging
 import logging.config
-import requests
-from .settings import HEADERS, API_KEY, LOG_CONFIG
-from .exceptions import APIKeyMissingError
 
-if API_KEY is None:
-    raise APIKeyMissingError("Set API_KEY in settings.py")
+import requests
+import yaml
+
+HEADERS = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 
 session = requests.Session()
 session.headers.update(HEADERS)
 
-with open(LOG_CONFIG) as config_file:
-    config = yaml.safe_load(config_file.read())
-    logging.config.dictConfig(config)
-
-from .anticaptcha import Anticaptcha
+try:
+    with open('logging.yml') as config_file:
+        config = yaml.safe_load(config_file.read())
+        logging.config.dictConfig(config)
+except FileNotFoundError:
+    logging.basicConfig(level=logging.INFO)
+    logging.warn(
+        "Can't find logging.yml. Try to use basic config for logging.")
