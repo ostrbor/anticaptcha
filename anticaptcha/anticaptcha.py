@@ -4,6 +4,7 @@ import time
 from base64 import b64encode
 
 from . import session
+from .exceptions import AnticaptchaException
 
 TIMEOUT = 60  # max seconds to wait for result
 WAIT_BEFORE_REQUESTS = 5  # wait seconds before starting to request for result
@@ -32,6 +33,7 @@ class Anticaptcha:
                 api_method, response['errorCode'],
                 response.get('errorDescription'))
             self.logger.error(msg)
+            raise AnticaptchaException(response['errorCode'])
         else:
             msg = "Received [%s] response: %s = %s" % (api_method, attr_to_log,
                                                        response[attr_to_log])
@@ -69,7 +71,7 @@ class Anticaptcha:
                     api_method, response['errorCode'],
                     response.get('errorDescription'))
                 self.logger.error(msg)
-                return
+                raise AnticaptchaException(response['errorCode'])
             elif response.get('status') == 'processing':
                 time.sleep(WAIT_BETWEEN_REQUESTS)
                 total_sec += WAIT_BETWEEN_REQUESTS
@@ -83,3 +85,4 @@ class Anticaptcha:
             msg = "TIMEOUT. Task (%s) was not solved for %s seconds" % (
                 task_id, total_sec)
             self.logger.error(msg)
+            raise AnticaptchaException(msg)
