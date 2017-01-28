@@ -8,7 +8,7 @@ from .exceptions import AnticaptchaException
 
 TIMEOUT = 60  # max seconds to wait for result
 WAIT_BEFORE_REQUESTS = 5  # wait seconds before starting to request for result
-WAIT_BETWEEN_REQUESTS = 1
+WAIT_BETWEEN_REQUESTS = 2
 
 
 class Anticaptcha:
@@ -22,7 +22,7 @@ class Anticaptcha:
     def _send_post_request(self, url, data, api_method):
         "Send request and log request"
         response = session.post(url, data=json.dumps(data)).json()
-        msg = "Sent [%s] to url: %s with clientKey: %s" % (
+        msg = "Sent [%s] to url: %s with clientKey: ...%s" % (
             api_method, url, self.clientKey_short)
         self.logger.info(msg)
         return response
@@ -56,6 +56,7 @@ class Anticaptcha:
         data = {'clientKey': self.clientKey, 'task': task}
         response = self._send_post_request(url, data, api_method)
         self._log_response(response, 'taskId', api_method)
+        return response
 
     def getTaskResult(self, task_id):
         """ -> dict with solution and extra info about task OR None"""
