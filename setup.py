@@ -14,7 +14,7 @@ def requirements():
 
 setup(
     name='anticaptcha',
-    version='0.1',
+    version='0.0.1',
     description='simple anti captcha library',
     long_description=readme(),
     author='Boris Ostretsov',
